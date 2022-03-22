@@ -31,7 +31,7 @@ def see():
                 )
             )
             print("\n")
-            conn.close()
+        conn.close()
     except Error as e:
         print("Error while connecting to db", e)
 
