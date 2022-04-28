@@ -14,7 +14,7 @@ def update():
     try:
         conn = connect(host="localhost", user="mic", password="xxxx", database="bkmks")
         cur = conn.cursor()
-        query = " UPDATE bkmks SET " + coluna + " = '" + update + "' WHERE id = " + ident
+        query = " UPDATE bkmks SET " + coluna + " = " + update + " WHERE id = " + ident
         print(query)
         cur.execute(query)
         conn.commit()
