@@ -1,0 +1,13 @@
+[Unit]
+Description=Searches the bookmarks db for 404 links and erases their entries.
+After=network.target
+
+[Service]
+WorkingDirectory=/home/mic/python/bkmks_python/bkmks_python/db_cleaning
+ExecStart=/usr/bin/celery -A tasks beat
+User=mic
+Group=mic
+
+[Install]
+WantedBy=multi-user.target
+
